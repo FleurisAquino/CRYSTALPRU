@@ -20,9 +20,9 @@ namespace CrudNominaMejorado
 
         public coneccion()
         {
+            cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
             try
-            {
-                cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
+            {               
                 cnx.Open();
                 MessageBox.Show("Conectado");
             }
@@ -34,6 +34,7 @@ namespace CrudNominaMejorado
         }
         public string insertar(int codigo, string nombre, string apellido, string fecha)
         {
+            cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
             string salida = "Se Guardo";
             try
             {
@@ -48,6 +49,7 @@ namespace CrudNominaMejorado
         }
         public int personaregistrada (int codigo)
         {
+            cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
             int contador = 0;
             try
             {

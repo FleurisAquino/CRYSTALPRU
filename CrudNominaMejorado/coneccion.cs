@@ -4,19 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SQLite;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-
-
-
-
 namespace CrudNominaMejorado
 {
     class coneccion
     {
         SQLiteConnection cnx;
         SQLiteCommand cmd;
-        SQLiteDataReader dt;
+        
 
         public coneccion()
         {
@@ -24,52 +19,56 @@ namespace CrudNominaMejorado
             try
             {               
                 cnx.Open();
-                MessageBox.Show("Conectado");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No establesida:" + ex.ToString());
             }
+            finally
+            {
+                cnx.Close();
+            }
         
         }
-        public string insertar(int codigo, string nombre, string apellido, string fecha)
+        public string insertar(string sql)
         {
             cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
-            string salida = "Se Guardo";
+            
             try
             {
-                cmd = new SQLiteCommand("insert into empleado (codigo_emp,nombre,apellido,fecha_nacimiento)values(" + codigo + ",'" + nombre + "','" + apellido + "','" + fecha + "')");
+                cnx.Open();
+                cmd = new SQLiteCommand(sql, cnx);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Guardado");
             }
             catch (Exception ex)
             {
-                salida = "NO GUARDADO:" + ex.ToString();
+                MessageBox.Show("NO GUARDADO:" + ex.ToString());
             }
-            return salida;
+            return null;
         }
-        public int personaregistrada (int codigo)
-        {
-            cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
-            int contador = 0;
-            try
+              public DataSet MostrarData (string sql)    //aqui aqui----------------------------------
             {
-                cmd = new SQLiteCommand("select * from empleado where codigo =(" + codigo + ")");
-                dt = cmd.ExecuteReader();
-                while (dt.Read()) 
-                {
-                    contador++;
-                }
-                dt.Close();
+             cnx = new SQLiteConnection("Data Source = C:\\SQLite\\cnxpruva.db;Vercion=3;");
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No Registrado" + ex.ToString());
-            }
-            return contador;
+                try
+                {
+                    cnx.Open();
+                    DataSet dt = new DataSet();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, cnx);
+                    adapter.Fill(dt);
+                    return dt;
+
+
+                }
+                catch (Exception ex)
+                {
+                MessageBox.Show("No se pudo" + ex.ToString());
+                }
+            return null;
         }
-        
-       
+
+
     }
-   
+
 }   

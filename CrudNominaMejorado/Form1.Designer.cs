@@ -57,25 +57,30 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel_datos_emp = new System.Windows.Forms.Panel();
+            this.dtpingreso = new System.Windows.Forms.DateTimePicker();
+            this.dtpfchnc = new System.Windows.Forms.DateTimePicker();
             this.tbcodigo = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbsexo = new System.Windows.Forms.ComboBox();
             this.tbapellido = new System.Windows.Forms.TextBox();
-            this.tbfechai = new System.Windows.Forms.TextBox();
             this.tbnombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpfchnc = new System.Windows.Forms.DateTimePicker();
+            this.btconsulta = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.todosLosEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_datos_emp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -242,6 +247,7 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Actualizar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btcrear
             // 
@@ -344,6 +350,8 @@
             // panel_datos_emp
             // 
             this.panel_datos_emp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_datos_emp.Controls.Add(this.btconsulta);
+            this.panel_datos_emp.Controls.Add(this.dtpingreso);
             this.panel_datos_emp.Controls.Add(this.dtpfchnc);
             this.panel_datos_emp.Controls.Add(this.tbcodigo);
             this.panel_datos_emp.Controls.Add(this.Codigo);
@@ -351,17 +359,35 @@
             this.panel_datos_emp.Controls.Add(this.label8);
             this.panel_datos_emp.Controls.Add(this.cbsexo);
             this.panel_datos_emp.Controls.Add(this.tbapellido);
-            this.panel_datos_emp.Controls.Add(this.tbfechai);
             this.panel_datos_emp.Controls.Add(this.tbnombre);
             this.panel_datos_emp.Controls.Add(this.label7);
             this.panel_datos_emp.Controls.Add(this.label6);
             this.panel_datos_emp.Controls.Add(this.label4);
             this.panel_datos_emp.Controls.Add(this.label3);
             this.panel_datos_emp.Controls.Add(this.label2);
-            this.panel_datos_emp.Location = new System.Drawing.Point(12, 2);
+            this.panel_datos_emp.Controls.Add(this.menuStrip1);
+            this.panel_datos_emp.Location = new System.Drawing.Point(12, 3);
             this.panel_datos_emp.Name = "panel_datos_emp";
-            this.panel_datos_emp.Size = new System.Drawing.Size(512, 197);
+            this.panel_datos_emp.Size = new System.Drawing.Size(512, 196);
             this.panel_datos_emp.TabIndex = 11;
+            // 
+            // dtpingreso
+            // 
+            this.dtpingreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpingreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpingreso.Location = new System.Drawing.Point(130, 145);
+            this.dtpingreso.Name = "dtpingreso";
+            this.dtpingreso.Size = new System.Drawing.Size(121, 20);
+            this.dtpingreso.TabIndex = 19;
+            // 
+            // dtpfchnc
+            // 
+            this.dtpfchnc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpfchnc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfchnc.Location = new System.Drawing.Point(130, 119);
+            this.dtpfchnc.Name = "dtpfchnc";
+            this.dtpfchnc.Size = new System.Drawing.Size(121, 20);
+            this.dtpfchnc.TabIndex = 18;
             // 
             // tbcodigo
             // 
@@ -387,6 +413,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label8
             // 
@@ -414,13 +441,6 @@
             this.tbapellido.Name = "tbapellido";
             this.tbapellido.Size = new System.Drawing.Size(197, 20);
             this.tbapellido.TabIndex = 3;
-            // 
-            // tbfechai
-            // 
-            this.tbfechai.Location = new System.Drawing.Point(130, 143);
-            this.tbfechai.Name = "tbfechai";
-            this.tbfechai.Size = new System.Drawing.Size(197, 20);
-            this.tbfechai.TabIndex = 8;
             // 
             // tbnombre
             // 
@@ -474,14 +494,40 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre ";
             // 
-            // dtpfchnc
+            // btconsulta
             // 
-            this.dtpfchnc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpfchnc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfchnc.Location = new System.Drawing.Point(130, 119);
-            this.dtpfchnc.Name = "dtpfchnc";
-            this.dtpfchnc.Size = new System.Drawing.Size(197, 20);
-            this.dtpfchnc.TabIndex = 18;
+            this.btconsulta.Location = new System.Drawing.Point(24, 167);
+            this.btconsulta.Name = "btconsulta";
+            this.btconsulta.Size = new System.Drawing.Size(75, 23);
+            this.btconsulta.TabIndex = 20;
+            this.btconsulta.Text = "Consulta";
+            this.btconsulta.UseVisualStyleBackColor = true;
+            this.btconsulta.Click += new System.EventHandler(this.btconsulta_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(508, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivosToolStripMenuItem
+            // 
+            this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.todosLosEmpleadosToolStripMenuItem});
+            this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.archivosToolStripMenuItem.Text = "Archivos";
+            // 
+            // todosLosEmpleadosToolStripMenuItem
+            // 
+            this.todosLosEmpleadosToolStripMenuItem.Name = "todosLosEmpleadosToolStripMenuItem";
+            this.todosLosEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.todosLosEmpleadosToolStripMenuItem.Text = "Todos los Empleados";
+            this.todosLosEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.todosLosEmpleadosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -499,6 +545,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_datos_emp);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -511,6 +558,8 @@
             this.panel_datos_emp.ResumeLayout(false);
             this.panel_datos_emp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,7 +602,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbsexo;
         private System.Windows.Forms.TextBox tbapellido;
-        private System.Windows.Forms.TextBox tbfechai;
         private System.Windows.Forms.TextBox tbnombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -561,6 +609,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpfchnc;
+        private System.Windows.Forms.DateTimePicker dtpingreso;
+        private System.Windows.Forms.Button btconsulta;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem todosLosEmpleadosToolStripMenuItem;
     }
 }
 

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNominaMejorado", "CrudNominaMejorado\CrudNominaMejorado.csproj", "{3FBF911F-D447-4D30-9696-B80B5270A5A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reportes", "Reportes", "{94EA8052-5C3C-4C5B-8EEC-20EF0BA0BC3D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\..\..\SQLite\cnxpruva.db = ..\..\..\..\..\..\..\..\SQLite\cnxpruva.db
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

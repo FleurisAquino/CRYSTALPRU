@@ -16,14 +16,14 @@ namespace CrudNominaMejorado {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class reporte_persona : ReportClass {
+    public class CrystalReport2 : ReportClass {
         
-        public reporte_persona() {
+        public CrystalReport2() {
         }
         
         public override string ResourceName {
             get {
-                return "reporte_persona.rpt";
+                return "CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CrudNominaMejorado {
         
         public override string FullResourceName {
             get {
-                return "CrudNominaMejorado.reporte_persona.rpt";
+                return "CrudNominaMejorado.CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace CrudNominaMejorado {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedreporte_persona : Component, ICachedReport {
+    public class CachedCrystalReport2 : Component, ICachedReport {
         
-        public Cachedreporte_persona() {
+        public CachedCrystalReport2() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace CrudNominaMejorado {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            reporte_persona rpt = new reporte_persona();
+            CrystalReport2 rpt = new CrystalReport2();
             rpt.Site = this.Site;
             return rpt;
         }

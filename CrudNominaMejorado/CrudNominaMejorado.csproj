@@ -69,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="coneccion.cs" />
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DGVEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,12 +95,13 @@
     <Compile Include="reportes.Designer.cs">
       <DependentUpon>reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="reporte_persona.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>reporte_persona.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
+    <EmbeddedResource Include="CrystalReport2.resx">
+      <DependentUpon>CrystalReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DGVEmpleados.resx">
       <DependentUpon>DGVEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,10 +119,6 @@
     </Compile>
     <EmbeddedResource Include="reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reporte_persona.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reporte_persona.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

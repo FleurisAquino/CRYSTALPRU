@@ -57,6 +57,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel_datos_emp = new System.Windows.Forms.Panel();
+            this.btconsulta = new System.Windows.Forms.Button();
             this.dtpingreso = new System.Windows.Forms.DateTimePicker();
             this.dtpfchnc = new System.Windows.Forms.DateTimePicker();
             this.tbcodigo = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btconsulta = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosLosEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,6 +111,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(512, 117);
             this.panel3.TabIndex = 20;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // checkBox3
             // 
@@ -238,6 +239,7 @@
             this.button5.TabIndex = 18;
             this.button5.Text = "Imprimir ";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -371,6 +373,16 @@
             this.panel_datos_emp.Size = new System.Drawing.Size(512, 196);
             this.panel_datos_emp.TabIndex = 11;
             // 
+            // btconsulta
+            // 
+            this.btconsulta.Location = new System.Drawing.Point(24, 167);
+            this.btconsulta.Name = "btconsulta";
+            this.btconsulta.Size = new System.Drawing.Size(75, 23);
+            this.btconsulta.TabIndex = 20;
+            this.btconsulta.Text = "Consulta";
+            this.btconsulta.UseVisualStyleBackColor = true;
+            this.btconsulta.Click += new System.EventHandler(this.btconsulta_Click);
+            // 
             // dtpingreso
             // 
             this.dtpingreso.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -493,16 +505,6 @@
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre ";
-            // 
-            // btconsulta
-            // 
-            this.btconsulta.Location = new System.Drawing.Point(24, 167);
-            this.btconsulta.Name = "btconsulta";
-            this.btconsulta.Size = new System.Drawing.Size(75, 23);
-            this.btconsulta.TabIndex = 20;
-            this.btconsulta.Text = "Consulta";
-            this.btconsulta.UseVisualStyleBackColor = true;
-            this.btconsulta.Click += new System.EventHandler(this.btconsulta_Click);
             // 
             // menuStrip1
             // 

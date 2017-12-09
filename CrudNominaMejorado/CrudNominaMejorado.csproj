@@ -87,6 +87,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcargo.Designer.cs">
+      <DependentUpon>frmcargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepart.Designer.cs">
+      <DependentUpon>frmDepart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reportes.cs">
@@ -107,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcargo.resx">
+      <DependentUpon>frmcargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepart.resx">
+      <DependentUpon>frmDepart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

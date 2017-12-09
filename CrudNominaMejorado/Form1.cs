@@ -31,7 +31,8 @@ namespace CrudNominaMejorado
 
         private void btcre_Click(object sender, EventArgs e)
         {
-
+            Form forma = new frmcargo();
+            forma.Show();
         }
 
         private void btcrear_Click(object sender, EventArgs e)
@@ -65,7 +66,8 @@ namespace CrudNominaMejorado
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            Form forma = new DGVEmpleados();
+            forma.Show();
         }
 
         private void todosLosEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,6 +91,17 @@ namespace CrudNominaMejorado
 
            reportes f = new reportes("CrystalReport1.rpt");
            f.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form forma = new DGVEmpleados();
+            forma.Show();
         }
     }
 }

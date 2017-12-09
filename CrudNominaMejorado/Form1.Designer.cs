@@ -161,6 +161,7 @@
             this.button8.TabIndex = 12;
             this.button8.Text = "Crear ";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -170,6 +171,7 @@
             this.button9.TabIndex = 11;
             this.button9.Text = "Detalle";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // btcre
             // 

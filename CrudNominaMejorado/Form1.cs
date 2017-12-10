@@ -89,7 +89,7 @@ namespace CrudNominaMejorado
            DataSet ds = oper.MostrarData(" select codigo_emp, nombre, apellido from empleado   ");
            ds.WriteXml("c:\\SQLite\\SQLite\\cnxpruva.xml");
 
-           reportes f = new reportes("CrystalReport1.rpt");
+           reportes f = new reportes("CrystalReport2.rpt");
            f.Show();
         }
 
@@ -100,7 +100,7 @@ namespace CrudNominaMejorado
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form forma = new DGVEmpleados();
+            Form forma = new frmDepart();
             forma.Show();
         }
     }
